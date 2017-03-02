@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infotification Basic Usage Example</title>
+    <link href="../src/css/infotifications.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="application/javascript" src="../src/js/infotifications.v0.0.1.js"></script>
+</head>
+<body>
+    <div>
+        <button type="button" id="top-left">Top Left</button>
+        <button type="button" id="bottom-left">Bottom Left</button>
+        <button type="button" id="top-right">Top Right</button>
+        <button type="button" id="bottom-right">Bottom Right</button>
+    </div>
+
+<script>
+
+    $("#top-left").click(function () {
+        $("body").infotification({
+            position: "top-left",
+            duration: 5000
+        });
+    });
+    $("#bottom-left").click(function () {
+        $("body").infotification({
+            position: "bottom-left",
+            duration: 5000
+        });
+    });
+    $("#top-right").click(function () {
+        $("body").infotification({
+            position: "top-right",
+            duration: 5000
+        });
+    });
+    $("#bottom-right").click(function () {
+        $("body").infotification({
+            position: "bottom-right",
+            duration: 5000
+        });
+    });
+</script>
+</body>
+</html>

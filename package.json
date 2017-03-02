@@ -1,0 +1,22 @@
+{
+  "name": "infotification-jquery-notification-plugin",
+  "version": "0.0.1",
+  "description": "Notification plugin for jquery",
+  "main": "infotifications.v0.0.1.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozanbatuhanceylan/infotification-jquery-notification-plugin.git"
+  },
+  "author": "OBC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozanbatuhanceylan/infotification-jquery-notification-plugin/issues"
+  },
+  "homepage": "https://github.com/ozanbatuhanceylan/infotification-jquery-notification-plugin#readme"
+}

@@ -1,0 +1,37 @@
+/**
+ * Created by OBC on 01.03.2017.
+ */
+
+.top-left {
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+
+.top-right {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#infotification_wrapper{
+    width:300px;
+    display: block;
+}
+
+#infotification_wrapper div{
+    padding:20px;
+    margin:10px;
+}
