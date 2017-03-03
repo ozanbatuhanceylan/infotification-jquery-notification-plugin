@@ -26,12 +26,14 @@
     $("#bottom-left").click(function () {
         $("body").infotification({
             position: "bottom-left",
-            duration: 5000
+            type: "slide",
+            duration: 1000
         });
     });
     $("#top-right").click(function () {
         $("body").infotification({
             position: "top-right",
+            type: "fade",
             duration: 5000
         });
     });

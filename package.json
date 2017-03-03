@@ -1,6 +1,6 @@
 {
-  "name": "infotification-jquery-notification-plugin",
-  "version": "0.0.1",
+  "name": "infotification",
+  "version": "0.1.2",
   "description": "Notification plugin for jquery",
   "main": "infotifications.v0.0.1.js",
   "directories": {

@@ -6,8 +6,10 @@
         var settings = $.extend({
             // These are the defaults.
             position: "top-right",
-            backgroundColor: "green",
+            backgroundColor: "#0d00c9",
+            textColor: "#eeeeee",
             message: "This is a test notification!",
+            type: 'slide',
             duration: 5000
         }, options );
 
@@ -18,8 +20,8 @@
             }else{
                 if(!wrapper.hasClass(settings.position)){
                     wrapper.remove();
+                    elem.append("<div id='infotification_wrapper' class='" + settings.position + "'></div>");
                 }
-                elem.append("<div id='infotification_wrapper' class='" + settings.position + "'></div>");
             }
         };
 
@@ -37,14 +39,27 @@
 
         var appendNotification = function (elem) {
             var i = checkInfotification();
-            elem.append("<div id='infotification-" + i + "' style='background-color:" + settings.backgroundColor + "; position:" + settings.position + "; display: none;'>" + settings.message + "</div>");
+            elem.append("<div id='infotification-" + i + "' style='display: none;'></div>");
             var createdElem = $("#infotification-" + i);
-            createdElem.fadeIn();
-            setTimeout(function () {
-                createdElem.fadeOut(function () {
-                    this.remove();
-                });
-            }, settings.duration);
+            createdElem.css('background-color', settings.backgroundColor);
+            createdElem.css('color', settings.textColor);
+            createdElem.html(settings.message);
+            if(settings.type == "fade"){
+                createdElem.fadeIn();
+                setTimeout(function () {
+                    createdElem.fadeOut(function () {
+                        this.remove();
+                    });
+                }, settings.duration);
+            }else if(settings.type == "slide"){
+                createdElem.slideToggle("slow");
+                setTimeout(function () {
+                    createdElem.slideToggle('slow', function () {
+                        this.remove();
+                    });
+                }, settings.duration);
+            }
+
 
 
         };
