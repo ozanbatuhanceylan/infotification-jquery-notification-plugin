@@ -35,3 +35,34 @@
     padding:20px;
     margin:10px;
 }
+
+a.close-button{
+    display: block;
+    width:15px;
+    height:15px;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.infotification-info{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+.infotification-warning{
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.infotification-danger{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.infotification-success{
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}

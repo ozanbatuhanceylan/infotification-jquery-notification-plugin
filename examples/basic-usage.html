@@ -14,6 +14,17 @@
         <button type="button" id="top-right">Top Right</button>
         <button type="button" id="bottom-right">Bottom Right</button>
     </div>
+    <div>
+        <button type="button" id="fade">Fade</button>
+        <button type="button" id="slide">Slide</button>
+    </div>
+
+    <div>
+        <button type="button" id="info">Info</button>
+        <button type="button" id="warning">Warning</button>
+        <button type="button" id="danger">Danger</button>
+        <button type="button" id="success">Success</button>
+    </div>
 
 <script>
 
@@ -40,9 +51,20 @@
     $("#bottom-right").click(function () {
         $("body").infotification({
             position: "bottom-right",
+            duration: 40000
+        });
+    });
+    $("#slide").click(function () {
+        $("body").infotification({
+            type: "slide",
             duration: 5000
         });
     });
+    $("#fade").click(function () {$("body").infotification({type: "fade",duration: 5000});});
+    $("#info").click(function () {$("body").infotification({type: "fade",style:"info",duration: 5000});});
+    $("#warning").click(function () {$("body").infotification({type: "fade",style:"warning",duration: 5000});});
+    $("#danger").click(function () {$("body").infotification({type: "fade",style:"danger",duration: 5000});});
+    $("#success").click(function () {$("body").infotification({type: "fade",style:"success",duration: 5000});});
 </script>
 </body>
 </html>

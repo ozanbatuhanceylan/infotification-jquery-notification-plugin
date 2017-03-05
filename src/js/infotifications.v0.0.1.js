@@ -6,8 +6,7 @@
         var settings = $.extend({
             // These are the defaults.
             position: "top-right",
-            backgroundColor: "#0d00c9",
-            textColor: "#eeeeee",
+            style:"info",
             message: "This is a test notification!",
             type: 'slide',
             duration: 5000
@@ -41,9 +40,10 @@
             var i = checkInfotification();
             elem.append("<div id='infotification-" + i + "' style='display: none;'></div>");
             var createdElem = $("#infotification-" + i);
-            createdElem.css('background-color', settings.backgroundColor);
-            createdElem.css('color', settings.textColor);
+
+            createdElem.addClass('infotification-' + settings.style);
             createdElem.html(settings.message);
+
             if(settings.type == "fade"){
                 createdElem.fadeIn();
                 setTimeout(function () {
