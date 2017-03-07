@@ -2,3 +2,7 @@
 .idea/modules.xml
 *.xml
 *.log
+compiled/*
+node_modules/*
+gulpfile.js
+package.json

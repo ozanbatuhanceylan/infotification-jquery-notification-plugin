@@ -15,15 +15,13 @@
 }
 
 .bottom-left {
-    position:absolute;
-    bottom: 10px;
-    left: 10px;
+    display: table-cell !important;
+    vertical-align: bottom !important;;
 }
 
 .bottom-right {
-    position:absolute;
-    bottom: 10px;
-    right: 10px;
+    display: table-cell !important;;
+    vertical-align: bottom !important;;
 }
 
 #infotification_wrapper{

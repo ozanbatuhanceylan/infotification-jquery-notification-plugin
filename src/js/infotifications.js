@@ -15,16 +15,36 @@
         var construct = function (elem) {
             var wrapper = $("#infotification_wrapper");
             if(wrapper.length == 0){
-                elem.append("<div id='infotification_wrapper' class='" + settings.position + "'></div>");
+                elem.append("<div id='infotification_wrapper' class='created " + settings.position + "' style='" + calcWindowPosition(settings.position) + "'></div>");
             }else{
-                if(!wrapper.hasClass(settings.position)){
+                if(!wrapper.hasClass("created " + settings.position)){
                     wrapper.remove();
-                    elem.append("<div id='infotification_wrapper' class='" + settings.position + "'></div>");
+                    elem.append("<div id='infotification_wrapper' class='created " + settings.position + "' style='" + calcWindowPosition(settings.position) + "'></div>");
                 }
             }
         };
 
-        construct(this);
+        var calcWindowPosition = function (position) {
+            var top = window.pageYOffset - document.documentElement.clientTop;
+            var bottom = top + window.innerHeight;
+
+            if(position == "top-left"){
+                return "position: absolute; top:" + parseInt(top + 10) + "px; left: 10px;  z-index:2147483647";
+            }
+            if(position == "top-right"){
+                return "position: absolute; top:" + parseInt(top + 10) + "px; right: 10px; z-index:2147483647";
+            }
+            if(position == "bottom-left"){
+                return "position: absolute; top:" + parseInt(bottom - 90) + "px; left: 10px; z-index:2147483647";
+            }
+            if(position == "bottom-right"){
+                return "position: absolute; top:" + parseInt(bottom - 90) + "px; right: 10px; z-index:2147483647";
+            }
+
+            console.log("Position that is given is wrong!");
+            return false;
+
+        };
 
         var checkInfotification = function () {
             if($("#infotification_wrapper").length > 0 && $("#infotification_wrapper div").length > 0){
@@ -63,8 +83,7 @@
 
 
         };
-
-        // Greenify the collection based on the settings variable.
+        construct(this);
         return appendNotification($("#infotification_wrapper"));
     }
  }(jQuery));

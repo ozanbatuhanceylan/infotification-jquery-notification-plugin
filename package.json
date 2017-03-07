@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/ozanbatuhanceylan/infotification-jquery-notification-plugin/issues"
   },
-  "homepage": "https://github.com/ozanbatuhanceylan/infotification-jquery-notification-plugin#readme"
+  "homepage": "https://github.com/ozanbatuhanceylan/infotification-jquery-notification-plugin#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-minify": "0.0.15",
+    "gulp-uglify": "^2.0.1"
+  }
 }
